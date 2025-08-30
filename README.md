@@ -60,5 +60,5 @@ touch ~/.hushlogin
 - **CRLF^M**: `sed -i 's/\r$//' /path/to/script`.
 
 ## Credits
-- Original investigation & fixes by Dylan + ChatGPT.
+- Original investigation & fixes by Dylan & thanks to Aravind Potluri (CIPH3R) for his boot-kali script
 - License: MIT.
