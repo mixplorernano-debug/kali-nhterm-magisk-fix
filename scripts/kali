@@ -1,0 +1,21 @@
+#!/system/bin/sh
+# NH-Terminal → Magisk CLI → chroot Kali (minimal & robust)
+# https://github.com/yourname/kali-nhterm-magisk-fix
+
+# Pick a working Magisk CLI (modern Magisk exposes the binary; yours may be /debug_ramdisk/magisk)
+if [ -x /debug_ramdisk/magisk ]; then
+  MAGISK=/debug_ramdisk/magisk
+elif [ -x /sbin/magisk ]; then
+  MAGISK=/sbin/magisk
+else
+  MAGISK="$(magisk --path 2>/dev/null)/magisk"
+fi
+[ -x "$MAGISK" ] || { echo "[nh] magisk CLI not found"; exit 127; }
+
+# NetHunter rootfs (change if yours is elsewhere)
+KALIFS="/data/local/nhsystem/kalifs"
+[ -d "$KALIFS" ] || { echo "[nh] missing $KALIFS"; exit 1; }
+[ -x /system/bin/chroot ] || { echo "[nh] no /system/bin/chroot"; exit 1; }
+
+# Drop straight into login shell
+exec "$MAGISK" su --mount-master -c   "/system/bin/chroot $KALIFS /bin/bash -l"

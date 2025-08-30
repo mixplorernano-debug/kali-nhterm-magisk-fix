@@ -1,0 +1,19 @@
+name: Bug report
+description: Report a problem launching Kali from NH-Terminal
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: checkboxes
+    attributes:
+      label: Checks
+      options:
+        - label: I have read the README and tried scripts/fix-nh.sh
+          required: true
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Paste exact error lines/screenshots.
+  - type: textarea
+    attributes:
+      label: Diagnostics
+      description: Paste output of scripts/diag.sh
