@@ -6,6 +6,22 @@ zip"
 
 **Fix NH-Terminal (NetHunter Terminal) to reliably launch the Kali chroot on modern Magisk using the Magisk CLI** — no `su`, no Termux paths, no `-c: not found`.
 
+```
+
+git clone https://github.com/Dylanmurzello/kali-nhterm-magisk-fix
+  cd kali-nhterm-magisk-fix
+
+  ```
+  ### Execute the Script:
+Run the fix script 
+with execution permissions:
+```
+  chmod +x scripts/fix-nh.sh
+```
+
+
+
+
 ## TL;DR
 ```sh
 # from Termux or adb shell
