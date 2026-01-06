@@ -1,4 +1,8 @@
+patch this 
 # kali-nhterm-magisk-fix
+# "/data/data/com.termux/files/usr"
+# "/data/local/tmp/Boot-Animation-install.
+zip"
 
 **Fix NH-Terminal (NetHunter Terminal) to reliably launch the Kali chroot on modern Magisk using the Magisk CLI** — no `su`, no Termux paths, no `-c: not found`.
 
